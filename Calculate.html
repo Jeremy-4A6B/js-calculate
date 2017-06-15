@@ -44,7 +44,7 @@
             <option value="divide">/</option>
           </select>
         </p>
-        <button type="button" id="calculate">Calculate</button>
+        <button type="button" id="calculate" onclick="functie()">Calculate</button>
         <p class="result">Result: <strong id="result">-</strong></p>
     </form>
 
@@ -68,8 +68,19 @@
       
     <!-- JavaScript - better to put code in external JS file -->    
     <script>
-
-        
+        function functie(){
+            var str = document.getElementById("numbers").value;
+            var resultaat = str.split(",");
+            
+            var totaal = 0;
+            
+            if(document.getElementById("operation").value == "sum"){
+                for(i=0; i<resultaat.length; i++){
+                    totaal += parseFloat(resultaat[i]);
+                }
+                console.log(totaal);
+            }
+        }
         // Write your JS code here
 
         
