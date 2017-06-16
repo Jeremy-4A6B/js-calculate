@@ -75,12 +75,24 @@
             var totaal = 0;
             
             if(document.getElementById("operation").value == "sum"){
-                for(i=0; i<resultaat.length; i++){
+                for(var i=0; i<resultaat.length; i++){
                     totaal += parseFloat(resultaat[i]);
                 }
-                console.log(totaal);
+                document.getElementById("result").innerHTML = totaal;
+                
+            }else if(document.getElementById("operation").value == "substract"){
+               
+                totaal = parseFloat (resultaat[0]);
+                for (var i=1; i<resultaat.length; i++){
+                    
+                
+                    totaal -= parseFloat(resultaat[i]);
+                    
+                }
+                document.getElementById("result").innerHTML = totaal;
             }
         }
+        
         // Write your JS code here
 
         
