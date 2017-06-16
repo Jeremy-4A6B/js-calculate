@@ -104,6 +104,16 @@
                     
                 }
                 document.getElementById("result").innerHTML = totaal;
+            }else{
+                totaal = parseFloat (resultaat[0]);
+                
+                for (var i=1; i<resultaat.length; i++){
+                    
+                    totaal /= parseFloat(resultaat[i]); 
+                    
+                }
+                document.getElementById("result").innerHTML = totaal;
+                
             }
             
         }
